@@ -1,5 +1,4 @@
 import Directory from "./components/Directory/Directory.component.jsx";
-import "./App.sass";
 
 const App = () => {
   const categories = [
