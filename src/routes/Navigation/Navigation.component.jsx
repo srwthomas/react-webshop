@@ -1,14 +1,22 @@
-import { Outlet } from "react-router-dom";
+import { Fragment } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "./Navigation.style.sass";
 
 const Navigation = () => {
   return (
-    <div>
-      <div>
-        <h1>This is the navbar</h1>
-        <Outlet />
+    <Fragment>
+      <div className="navigation">
+        <Link className="logo-container" to="/">
+          <div>Logo</div>
+        </Link>
+        <div className="nav-links-container">
+          <Link className="nav-link" to="/shop">
+            SHOP
+          </Link>
+        </div>
       </div>
-    </div>
+      <Outlet />
+    </Fragment>
   );
 };
 
