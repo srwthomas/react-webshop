@@ -4,6 +4,8 @@
 import SignUpForm from "../../components/SignUpForm/SignUpForm.component";
 import SignInForm from "../../components/SignInForm/SignInForm.component";
 
+import "./Auth.style.sass";
+
 const Auth = () => {
   // useEffect(async () => {
   //   const response = await getRedirectResult(auth);
@@ -13,7 +15,7 @@ const Auth = () => {
   // }, []);
 
   return (
-    <div>
+    <div className="auth-container">
       <SignInForm />
       <SignUpForm />
       {/* <button onClick={signInWithGoogleRedirect}>
