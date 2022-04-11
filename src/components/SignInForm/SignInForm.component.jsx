@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
   signInWithGooglePopup,
-  createUserDoc,
+  // createUserDoc,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils.js";
 
+import { UserContext } from "../../contexts/User.context.jsx";
 import FormInput from "../FormInput/FormInput.component";
-import Button from "../Button/Button.component";
+import { Button } from "../Button/Button.component";
 
 import "./SignInForm.style.sass";
 
@@ -22,6 +23,8 @@ const SignInForm = () => {
 
   // console.log(formFields);
 
+  const { setCurrentUser } = useContext(UserContext);
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -35,11 +38,11 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+      setCurrentUser(user);
       resetFormFields();
     } catch (err) {
       if (err.code === "auth/wrong-password" || "auth/user-not-found") {
@@ -50,7 +53,7 @@ const SignInForm = () => {
 
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
-    await createUserDoc(user);
+    setCurrentUser(user);
   };
 
   return (
@@ -80,7 +83,7 @@ const SignInForm = () => {
         />
         <div className="buttons-container">
           <Button type="submit">Sign in</Button>
-          <Button type="button" buttonType="google" onClick={signInWithGoogle}>
+          <Button type="button" onClick={signInWithGoogle} buttonType="google">
             Sign in with Google
           </Button>
         </div>
