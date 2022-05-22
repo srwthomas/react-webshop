@@ -16,6 +16,10 @@ const addCartItem = (cartItems, productToAdd) => {
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
+const incrementCheckoutItem = (cartItems) => {
+  const currentCheckoutItem = cartItems.find();
+};
+
 export const CartContext = createContext({
   isCartOpen: false,
   setIsCartOpen: () => {},
