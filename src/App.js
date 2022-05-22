@@ -3,6 +3,7 @@ import Home from "./routes/Home/Home.component.jsx";
 import Navigation from "./routes/Navigation/Navigation.component.jsx";
 import Auth from "./routes/Auth/Auth.component.jsx";
 import Shop from "./routes/Shop/Shop.component.jsx";
+import Checkout from "./routes/Checkout/Checkout.component.jsx";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="shop" element={<Shop />} />
         <Route path="auth" element={<Auth />} />
       </Route>
+      <Route path="checkout" element={<Checkout />} />
     </Routes>
   );
 };
