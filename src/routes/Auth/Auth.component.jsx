@@ -4,7 +4,7 @@
 import SignUpForm from "../../components/SignUpForm/SignUpForm.component";
 import SignInForm from "../../components/SignInForm/SignInForm.component";
 
-import "./Auth.style.sass";
+import { AuthContainer } from "./Auth.style.jsx";
 
 const Auth = () => {
   // useEffect(async () => {
@@ -15,13 +15,13 @@ const Auth = () => {
   // }, []);
 
   return (
-    <div className="auth-container">
+    <AuthContainer>
       <SignInForm />
       <SignUpForm />
       {/* <button onClick={signInWithGoogleRedirect}>
         Sign in with Google Redirect
       </button> */}
-    </div>
+    </AuthContainer>
   );
 };
 
