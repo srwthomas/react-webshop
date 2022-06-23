@@ -6,7 +6,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../FormInput/FormInput.component";
-import { Button } from "../Button/Button.component";
+import Button from "../Button/Button.component";
 
 import { SignUpContainer } from "./SignUpForm.style.jsx";
 
