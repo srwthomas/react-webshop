@@ -6,6 +6,9 @@ export const CategoryPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  h2 {text-align: center;
+      padding: 0.7em;
+    }
 `;
 
 export const TitleLink = styled(Link)`
