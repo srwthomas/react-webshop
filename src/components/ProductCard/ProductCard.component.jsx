@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { CartContext } from "../../contexts/Cart.context";
 
-import { Button } from "../Button/Button.component";
+import Button from "../Button/Button.component";
 
 import {
   ProductCardContainer,
