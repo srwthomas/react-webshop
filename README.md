@@ -1,8 +1,10 @@
 Simple Web-shop 
 
-## Available Scripts
+## To Use
 
-In the project directory, you can run:
+git clone repo
+
+## Then
 
 ### `npm update`
 
