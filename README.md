@@ -1,4 +1,4 @@
-Simple Web-shop 
+Simple Web-shop adapted from Hjalmar-K-sson
 
 ## To Use
 
