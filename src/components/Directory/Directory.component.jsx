@@ -5,7 +5,7 @@ const categories = [
   {
     title: "hats",
     imageUrl:
-      "https://images.unsplash.com/photo-1602337871614-a2bf032f4701?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1627733041826-77dd65dc5a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     id: 1,
     route: "shop/hats",
   },
