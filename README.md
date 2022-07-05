@@ -1,4 +1,10 @@
+#README
+
 Simple Web-shop adapted from Hjalmar-K-sson
+
+* Livecode:
+
+  https://frontend-react-webshope.surge.sh/checkout
 
 ## To Use
 
