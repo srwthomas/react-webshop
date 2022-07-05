@@ -1,10 +1,10 @@
-## Getting Started with Create React App
+Simple Web-shop adapted from Hjalmar-K-sson
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## To Use
 
-## Available Scripts
+git clone repo
 
-In the project directory, you can run:
+## Then
 
 ### `npm update`
 
