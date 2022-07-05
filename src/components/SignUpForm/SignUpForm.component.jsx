@@ -6,7 +6,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../FormInput/FormInput.component";
-import { Button } from "../Button/Button.component";
+import Button from "../Button/Button.component";
 
 import { SignUpContainer } from "./SignUpForm.style.jsx";
 
@@ -20,8 +20,6 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  // console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -43,7 +41,6 @@ const SignUpForm = () => {
         email,
         password
       );
-      // console.log(user);
       await createUserDoc(user, { displayName });
       resetFormFields();
     } catch (err) {
@@ -62,39 +59,31 @@ const SignUpForm = () => {
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Display Name"
-          inputOptions={{
-            type: "text",
-            onChange: handleChange,
-            name: "displayName",
-            value: displayName,
-          }}
+          type="text"
+          onChange={handleChange}
+          name="displayName"
+          value={displayName}
         />
         <FormInput
           label="Email"
-          inputOptions={{
-            type: "email",
-            onChange: handleChange,
-            name: "email",
-            value: email,
-          }}
+          type="email"
+          onChange={handleChange}
+          name="email"
+          value={email}
         />
         <FormInput
           label="Password"
-          inputOptions={{
-            type: "password",
-            onChange: handleChange,
-            name: "password",
-            value: password,
-          }}
+          type="password"
+          onChange={handleChange}
+          name="password"
+          value={password}
         />
         <FormInput
           label="Confirm password"
-          inputOptions={{
-            type: "password",
-            onChange: handleChange,
-            name: "confirmPassword",
-            value: confirmPassword,
-          }}
+          type="password"
+          onChange={handleChange}
+          name="confirmPassword"
+          value={confirmPassword}
         />
         <Button type="submit">Sign in</Button>
       </form>

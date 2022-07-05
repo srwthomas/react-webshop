@@ -6,7 +6,7 @@ import {
 } from "../../utils/firebase/firebase.utils.js";
 
 import FormInput from "../FormInput/FormInput.component";
-import { Button } from "../Button/Button.component";
+import Button from "../Button/Button.component";
 
 import { SignInContainer, ButtonsContainer } from "./SignInForm.style.jsx";
 
@@ -18,8 +18,6 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  // console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -54,23 +52,19 @@ const SignInForm = () => {
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Email"
-          inputOptions={{
-            type: "email",
-            onChange: handleChange,
-            name: "email",
-            value: email,
-            required: true,
-          }}
+          type="email"
+          onChange={handleChange}
+          name="email"
+          value={email}
+          required
         />
         <FormInput
           label="Password"
-          inputOptions={{
-            type: "password",
-            onChange: handleChange,
-            name: "password",
-            value: password,
-            required: true,
-          }}
+          type="password"
+          onChange={handleChange}
+          name="password"
+          value={password}
+          required
         />
         <ButtonsContainer>
           <Button type="submit">Sign in</Button>
