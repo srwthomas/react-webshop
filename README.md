@@ -1,4 +1,4 @@
-#README
+# README
 
 Simple Web-shop adapted from Hjalmar-K-sson
 
