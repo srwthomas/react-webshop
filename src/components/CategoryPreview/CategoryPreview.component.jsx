@@ -5,6 +5,7 @@ import {
 } from "./CategoryPreview.style.jsx";
 
 import ProductCard from "../ProductCard/ProductCard.component";
+import React from 'react';
 
 const CategoryPreview = ({ title, products }) => {
   return (
