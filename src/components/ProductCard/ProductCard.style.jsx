@@ -21,7 +21,7 @@ export const ProductCardContainer = styled.div`
   }
   &:hover {
     img {
-      opacity: 0.8;
+      opacity: 0.7;
     }
     button {
       opacity: 0.85;
