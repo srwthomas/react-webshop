@@ -1,6 +1,6 @@
 # README
 
-Simple Web-shop adapted from Hjalmar-K-sson
+Simple React based Web-shop adapted from Hjalmar-K-sson
 
 * Livecode:
 
